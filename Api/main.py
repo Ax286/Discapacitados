@@ -95,7 +95,6 @@ def Modelo(input,output,x,y,epocas):
 x=arrDiscapacitados[0]
 y=arrDiscapacitados.T[:,1:4]
 MDiscapacitados=Modelo(1,3,x,y,3500)
-#tfjs.converters.save_keras_model(MDiscapacitados,'./Modelos/MDiscapacitados')
 
 #Entrenar modelo de Discapacitados por tipo (Hombres)
 x=arrDiscapacitados[2]
@@ -117,6 +116,7 @@ x=arrDiscapacitados[3]
 y=arrEdadesMujeres.T
 MMujeresEdad=Modelo(1,18,x,y,3500)
 
+#"""
 #Exportar modelos en formato H5
 MDiscapacitados.save('./Api/Modelos_H5/General.h5')
 MHombresTipo.save('./Api/Modelos_H5/MHombresTipo.h5')
@@ -139,3 +139,6 @@ tfjs.converters.save_keras_model(HombresEdad,'./Api/Modelos_js/MHombresEdad')
 tfjs.converters.save_keras_model(MujeresEdad,'./Api/Modelos_js/MMujeresEdad')
 
 print('Completado')
+#"""
+
+print(MHombresTipo.predict([2904198]))
