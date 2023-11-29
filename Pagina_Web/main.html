@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script>
+        async function modeloGeneral(){
+            const model = await tf.loadLayersModel('../Api/Modelos_js/General/model.json');
+            const prediccion = model.predict(tf.tensor2d([126014024], [1, 1]));
+            prediccion.print()
+        }
+        document.addEventListener('DOMContentLoaded', modeloGeneral);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
