@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Sitio Web</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Modelo 1</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Modelos</a>
+            <div class="dropdown-content">
+                <a href="modelo1.html">Modelo 1</a>
+                <a href="modelo2.html">Modelo 2</a>
+                <a href="modelo3.html">Modelo 3</a>
+                <a href="modelo4.html">Modelo 4</a>
+            </div>
+        </div>
+        <a href="about.html">Sobre Nosotros</a>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <!-- Contenido de la página aquí -->
+            <h2>Discapacitados</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, odit aut. Similique, maiores veritatis! Eveniet enim magnam illum porro, tenetur magni quod consequatur ea tempore harum qui consequuntur, aspernatur est.</p>
+            <label for="miCasilla">Ingresa texto:</label>
+            <input type="text" id="miCasilla" name="miCasilla">
+            <button type="button" onclick="realizarPrediccion()">Predicción</button>
+            <script>
+                async function cargarModelo() {
+                    // Cargar el modelo
+                    const modelo = await tf.loadLayersModel('modelo/model.json');
+                    return modelo;
+                }
+                async function realizarPrediccion() {
+                    // Obtener el valor del input
+                    const inputCelsius = document.getElementById('miCasilla').value;
+                    // Cargar el modelo
+                    const modelo = await cargarModelo();
+                    // Preprocesar el dato de entrada
+                    const datoEntrada = tf.tensor2d([[parseFloat(inputCelsius)]]);
+                    // Hacer la predicción
+                    const resultado = modelo.predict(datoEntrada);
+                    // Mostrar el resultado en la consola
+                    resultado.print();
+                }
+                /* function mostrarTexto() {
+                    var mensaje = document.getElementById("miCasilla").value;
+                    alert("Mensaje: " + mensaje);
+                } */
+            </script>
+            
+            <div class="charts-container">
+                <div class="chart-container">
+                    <canvas id="pieChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="pieChart2"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="pieChart3"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="pieChart4"></canvas>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
