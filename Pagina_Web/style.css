@@ -78,7 +78,6 @@ nav a:hover {
     margin: 0 auto;
     text-align: center;
 }
-
 .chart-container canvas {
     max-width: 100%;
     height: auto;
@@ -94,4 +93,8 @@ nav a:hover {
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+p {
+    text-align: justify;
+    max-width: 1000px;
 }
