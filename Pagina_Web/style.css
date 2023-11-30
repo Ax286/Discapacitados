@@ -42,13 +42,13 @@ nav a:hover {
     padding: 20px;
     border-radius: 10px;
 }
-/*menu desplegable*/
+/*menu desplegable
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-.dropdown-content {
+.dropdown-content { 
     display: none;
     position: absolute;
     background-color: #4ecca3;
@@ -70,7 +70,7 @@ nav a:hover {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+}*/
 /* grafica de pastel */
 .chart-container {
     width: 80%;
