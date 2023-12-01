@@ -21,6 +21,7 @@ nav a {
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -94,7 +95,26 @@ nav a:hover {
     justify-content: center;
     flex-direction: column;
 }
+/* Estilo para el texto */
 p {
     text-align: justify;
     max-width: 1000px;
+}
+/* Estilo del boton */
+.boton-estilo {
+    background-color: #4ecca3;
+    border: none;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+.boton-estilo:hover {
+    background-color: #34a489;
+    color: white;
 }
