@@ -160,7 +160,7 @@ function GraficaTipoComparativa(hombres,mujeres){
           },
           title: {
             display: true,
-            text: 'COMPARACIÓN TIPO DE DISCAPACIDAD'
+            text: 'COMPARACIÓN ENTRE HOMBRES Y MUJERES POR TIPO DE DISCAPACIDAD'
           }
         }
     }
@@ -260,7 +260,7 @@ function GraficaEdadComparacion(hombres,mujeres){
             },
             title: {
                 display: true,
-                text: 'COMPARACIÓN ENTRE HOMBRES Y MUJERES DISCAPACITADOS POR RANGO DE EDAD'
+                text: 'COMPARACIÓN ENTRE HOMBRES Y MUJERES POR RANGO DE EDAD'
             }
         }
     }
