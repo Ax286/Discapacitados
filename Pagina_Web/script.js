@@ -99,7 +99,7 @@ function GraficaGeneral(datos) {
             },
             title: {
               display: true,
-              text: 'DISCAPACITADOS EN MEXICO'
+              text: 'DISCAPACITADOS EN MÉXICO'
             }
           }
     };
