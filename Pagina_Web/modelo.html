@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pronosticador Demográfico</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Modelos</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="modelo.html">Modelos</a>
+        <a href="about.html">Sobre Nosotros</a>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <!-- Contenido de la página aquí -->
+            <p>En esta sección presentamos gráficas ligadas a los modelos de aprendizaje que diseñamos, y se actualizan cuando se 
+                realiza un predicción. Solo ingresa la cantidad de habitantes en una población y observa los resultados.</p>
+            
+            <label for="miCasilla">Cantidad de habitantes:</label>
+            <input type="text" id="miCasilla" name="miCasilla">
+            <button type="button" onclick="realizarPrediccion()" class="boton-estilo">Predicción</button>
+            <script>
+                async function cargarModelo() {
+                    // Cargar el modelo
+                    const modelo = await tf.loadLayersModel('modelo/model.json');
+                    return modelo;
+                }
+                async function realizarPrediccion() {
+                    // Obtener el valor del input
+                    const inputCelsius = document.getElementById('miCasilla').value;
+                    // Cargar el modelo
+                    const modelo = await cargarModelo();
+                    // Preprocesar el dato de entrada
+                    const datoEntrada = tf.tensor2d([[parseFloat(inputCelsius)]]);
+                    // Hacer la predicción
+                    const resultado = modelo.predict(datoEntrada);
+                    // Mostrar el resultado en la consola
+                    resultado.print();
+                }
+                /* function mostrarTexto() {
+                    var mensaje = document.getElementById("miCasilla").value;
+                    alert("Mensaje: " + mensaje);
+                } */
+            </script>
+            
+            <div class="charts-container">
+                <div class="chart-container">
+                    <canvas id="pieChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="pieChart2"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="pieChart3"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="pieChart4"></canvas>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
