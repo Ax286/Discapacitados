@@ -90,7 +90,7 @@ function GraficaGeneral(datos) {
         maintainAspectRatio:true,
         scales: {
             y: {
-                beginAtZero: true
+                beginAtZero: true,
             }
         },
         plugins: {
