@@ -43,6 +43,11 @@ async function modeloMujeresEdad(discapacitados){
 
 //Metodo principal
 async function obtenerPrediccion(){
+    //Cambiar valor del slider
+    valor=document.getElementById("txtPoblacion").value
+    if(valor>=0 && valor<=130000000){
+        document.getElementById("slider").value=valor
+    }
     //Obtencion de los arreglos
     const general=await modeloGeneral()
     const hombresTipo=await modeloHombresTipo(general[1])
@@ -339,6 +344,11 @@ function Suma2Arreglos(arr1,arr2){
     }
 }
 
+//Mostrar valor del deslizador en la casilla
+function mostrarValor(){
+    valor=document.getElementById("slider").value
+    document.getElementById("txtPoblacion").value=valor
+}
 
 
 

@@ -92,7 +92,7 @@ def Modelo(input,output,x,y,epocas):
     return modelo
 
 #Entrenar modelo de Discapacitados general
-x=arrDiscapacitados[0]
+x=arrDiscapacitados[0] 
 y=arrDiscapacitados.T[:,1:4]
 MDiscapacitados=Modelo(1,3,x,y,3500)
 

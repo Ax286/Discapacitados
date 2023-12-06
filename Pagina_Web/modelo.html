@@ -25,10 +25,44 @@
             <p>En esta sección presentamos gráficas ligadas a los modelos de aprendizaje que diseñamos, y se actualizan cuando se 
                 realiza un predicción. Solo ingresa la cantidad de habitantes en una población y observa los resultados.</p>
             
-            <label for="miCasilla">Cantidad de habitantes:</label>
-            <input type="text" id="txtPoblacion" class="miCasilla" value="126014024">
-            <button type="button" onclick="obtenerPrediccion()" class="boton-estilo" id="btnCalcular">Predicción</button>
-
+            <div style="padding-top: 20px;padding-bottom: 20px;">
+                <label for="slider">Población de Mexico</label><br>
+                <input type="range" value="126014024" id="slider" class="deslizador" min="0" max="130000000" list="anios" oninput="mostrarValor()">
+                <datalist id="anios" class="datalist">
+                    <option value="16552722" label="1930" id="1930"></option>
+                    <option value="19653552" label="1940"></option>
+                    <option value="25791017" label="1950"></option>
+                    <option value="34923129" label="1960"></option>
+                    <option value="48225238" label="1970"></option>
+                    <option value="66846833" label="1980"></option>
+                    <option value="81249645" label="1990"></option>
+                    <option value="91158290" label="1995"></option>
+                    <option value="97483412" label="2000"></option>
+                    <option value="103263388" label="2005"></option>
+                    <option value="112336538" label="2010"></option>
+                    <option value="126014024" label="2020"></option>
+                </datalist>
+                <div class="etiquetasAnios">
+                    <label class="anio">1930</label>
+                    <label class="anio">1940</label>
+                    <label class="anio">1950</label>
+                    <label class="anio">1960</label>
+                    <label class="anio">1970</label>
+                    <label class="anio">1980</label>
+                    <label class="anio">1990</label>
+                    <label class="anio">1995</label>
+                    <label class="anio">2000</label>
+                    <label class="anio">2005</label>
+                    <label class="anio">2010</label>
+                    <label class="anio">2020</label>
+                </div>
+            </div>
+            <div style="padding-bottom: 20px;padding-top: 20px;">
+                <label for="miCasilla">Cantidad de habitantes:</label>
+                <input type="text" id="txtPoblacion" class="miCasilla" value="126014024">
+                <button type="button" onclick="obtenerPrediccion()" class="boton-estilo" id="btnCalcular">Predicción</button>
+            </div>
+            
             <div class="charts-container">
                 <div class="div_Grafica">
                     <canvas id="GraficaGeneral" style="width: 70%;"></canvas>
