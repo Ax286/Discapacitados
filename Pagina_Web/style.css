@@ -121,11 +121,22 @@ p {
 }
 
 .div_Grafica{
-    padding-bottom: 25px;
+    padding-bottom: 30px;
     padding-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.div_Grafica label{
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    font-style: oblique;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    width: 70%;
 }
 
 .miCasilla{
@@ -191,7 +202,36 @@ p {
 .anio:nth-child(12){
     left: 90%;
 }
+.container-pictures{
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+}
+
+.about-me{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+}
+
+.picture{
+    width: 50%;
+}
+.picture img{
+    border-radius: 50%;
+    border:black 2px solid;
+    width: 40%;
+    border-color: black;
+}
 
 
+.description{
+    width: 70%;
+    font-size: 16px;
+    font-family:cursive;
+}
 
-
+.description p{
+    text-align: center;
+}

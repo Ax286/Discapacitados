@@ -25,8 +25,8 @@
             <p>En esta sección presentamos gráficas ligadas a los modelos de aprendizaje que diseñamos, y se actualizan cuando se 
                 realiza un predicción. Solo ingresa la cantidad de habitantes en una población y observa los resultados.</p>
             
-            <div style="padding-top: 20px;padding-bottom: 20px;">
-                <label for="slider">Población de Mexico</label><br>
+            <div style="padding-top: 40px;padding-bottom: 20px;">
+                <label for="slider">Población en Mexico</label><br>
                 <input type="range" value="126014024" id="slider" class="deslizador" min="0" max="130000000" list="anios" oninput="mostrarValor()">
                 <datalist id="anios" class="datalist">
                     <option value="16552722" label="1930" id="1930"></option>
@@ -57,7 +57,7 @@
                     <label class="anio">2020</label>
                 </div>
             </div>
-            <div style="padding-bottom: 20px;padding-top: 20px;">
+            <div style="padding-bottom: 30px;padding-top: 30px;">
                 <label for="miCasilla">Cantidad de habitantes:</label>
                 <input type="text" id="txtPoblacion" class="miCasilla" value="126014024">
                 <button type="button" onclick="obtenerPrediccion()" class="boton-estilo" id="btnCalcular">Predicción</button>
@@ -66,18 +66,25 @@
             <div class="charts-container">
                 <div class="div_Grafica">
                     <canvas id="GraficaGeneral" style="width: 70%;"></canvas>
+                    <label>Esta grafica utiliza el modelo 'MDiscapacitados' el cual predice la cantidad de discapacitados en una poblacion dada. </label>
                 </div>
                 <div class="div_Grafica">
-                    <canvas id="GraficaEdadComparativa" style="width: 80%;"></canvas>  
+                    <canvas id="GraficaEdadComparativa" style="width: 80%;"></canvas> 
+                    <label>Esta grafica utiliza los modelos 'MHombresEdad' y 'MMujeresEdad' para comparar la cantidad de hombres y mujeres discapacitados
+                        dividido por el rango de edad, en base a una cantidad de discapacitados dada. 
+                    </label> 
                 </div>
                 <div class="div_Grafica">
                     <canvas id="GraficaTotalEdad" style="width: 50%;"></canvas>
+                    <label>Esta grafica utiliza los modelos 'MHombresEdad' y 'MMujeresEdad' para calcular la suma total de discapacitados en cada uno de los rangos de edad.</label>
                 </div>
                 <div class="div_Grafica">
                     <canvas id="GraficaTipoComparativa" style="width: 70%;"></canvas>
+                    <label>Esta grafica utiliza los modelo 'MHombresTipo' y 'MMujeresTipo' para comparar la cantidad de hombres y mujeres discapacitados dividido por el tipo de discapacidad. </label>
                 </div>
                 <div class="div_Grafica">
                     <canvas id="GraficaTotalTipo" style="width: 60%;"></canvas>
+                    <label>Esta grafica utiliza los modelo 'MHombresTipo' y 'MMujeresTipo' para calcular la suma total de discapacitados en cada uno de los tipos de discapacidad </label>
                 </div>
             </div>
         </div>
