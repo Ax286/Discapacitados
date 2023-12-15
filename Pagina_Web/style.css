@@ -89,13 +89,6 @@ nav a:hover {
     justify-content: space-around;
     flex-direction: column;
 }
-.parrafo{
-    width: 80%;
-    max-width: 1000px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
 /* Estilo para el texto */
 p {
     text-align: justify;
@@ -119,7 +112,7 @@ p {
     background-color: #34a489;
     color: white;
 }
-
+/*Estilo graficas*/
 .div_Grafica{
     padding-bottom: 25px;
     padding-top: 25px;
