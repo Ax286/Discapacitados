@@ -93,7 +93,7 @@ nav a:hover {
 /* Estilo para el texto */
 p {
     text-align: justify;
-    max-width: 1000px;
+    max-width: 100%;
 }
 /* Estilo del boton */
 .boton-estilo {
