@@ -73,8 +73,8 @@ nav a:hover {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}*/
-/* grafica de pastel */
+}
+--- grafica de pastel ---
 .chart-container {
     width: 80%;
     max-width: 400px;
@@ -84,7 +84,7 @@ nav a:hover {
 .chart-container canvas {
     max-width: 100%;
     height: auto;
-}
+}*/
 .charts-container {
     display: flex;
     justify-content: space-around;
@@ -216,7 +216,6 @@ p {
     border-radius: 50%;
     border:black 2px solid;
     width: 40%;
-    border-color: black;
 }
 
 
