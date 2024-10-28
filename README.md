@@ -1,1 +1,2 @@
-# PROYECTO DISCAPACITADOS
+## PROYECTO DISCAPACITADOS
+Somos dos estudiantes del Instituto Tecnológico de Tijuana, estamos en nuestro 11vo semestre, en primera instancia, desarrollamos este proyecto para acreditar nuestra residencia, sin embargo, estamos genuinamente interesados en explorar las capacidades de la inteligencia artificial para el desarrollo de nuevas herramientas que repercutan en múltiples campos, por ello, trabajamos con fervor en este proyecto, con potencial en el área humanitaria, informática y estadística.
