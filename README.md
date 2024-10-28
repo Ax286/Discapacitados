@@ -4,4 +4,6 @@ Somos dos estudiantes del Instituto Tecnológico de Tijuana, estamos en nuestro 
 
 Es un proyecto web de codigo abierto, tanto para curiosos como para programadores, consiste en cinco modelos de aprendizaje automático entrenados para predecir caracteristicas demograficas a partir de una población. El proposito del proyecto es servir como un recurso para cualquiera que le encuentre utilidad, como podrian ser investigadores, analistas, programadores o beneficiencia.
 
-Estos modelos fueron entrenados con datos oficiales de la INEGI y los pueden encontrar aqui https://www.inegi.org.mx/app/tabulados/interactivos/?pxq=Discapacidad_Discapacidad_01_29827fe7-b1cd-4bd2-81d6-9d08bda47df8&idrt=151&opc=t, este repositorio contiene todo el código y recursos utilizados. También hay disponibles dos manuales para quien guste conocer el proyecto en profundidad, un manual de usuario para el público en general y un manual técnico para especialistas.
+Este repositorio contiene todo el código y recursos utilizados. También hay disponibles dos manuales para quien guste conocer el proyecto en profundidad, un manual de usuario para el público en general y un manual técnico para especialistas.
+
+Estos modelos fueron entrenados con datos oficiales de la INEGI y los pueden encontrar aqui https://www.inegi.org.mx/app/tabulados/interactivos/?pxq=Discapacidad_Discapacidad_01_29827fe7-b1cd-4bd2-81d6-9d08bda47df8&idrt=151&opc=t
